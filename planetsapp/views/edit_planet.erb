@@ -1,0 +1,24 @@
+<form action="/planets/<%=@result['id']%>" method="post">
+    <label for="">Name</label>
+    <input type="text" name="name" value="<%=@result['name']%>">
+
+    <label for="">Diameter</label>
+    <input type="number" step="0.01" name="diameter" value="<%=@result['diameter']%>">
+
+    <label for="">Distance from Sun</label>
+    <input type="number" step="0.01" name="distance" value="<%=@result['distance']%>">
+
+    <label for="">Mass</label>
+    <input type="number" step="0.01" name="mass" value="<%=@result['mass']%>">
+
+    <label for="">Moons</label>
+    <input type="number" step="0.01" name="moon_count" value="<%=@result['moon_count']%>">
+
+    <label for="">image url</label>
+    <input type="text" name="image_url" value="<%=@result['image_url']%>">
+
+    <input type="hidden" name="_method" id="" value="patch">
+
+    <br><br>
+    <button>Edit</button>
+</form>

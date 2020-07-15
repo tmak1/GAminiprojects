@@ -1,0 +1,33 @@
+.main {
+    width: 70%;
+    margin: 100px auto;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.desc {
+    padding: 50px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    margin: 50px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+<a href="/planets/new" id="add-planets"> + Add planets</a>
+
+<% @results.each do |planet|%>
+
+    <div class="card">
+        <a href="/planets/<%=planet['id']%>">
+            <img src="<%=planet['image_url']%>" alt="Avatar" style="width:100%">
+        </a>
+        <div class="card-container">
+            <h2><%=planet['name']%></h2> 
+        </div>
+        <form action="/planets/<%=planet['id']%>" method="post" style="display: inline;">
+            <input type="hidden" name="_method" id="" value="delete">
+            <button>Delete</button>
+        </form>
+        <button><a href="/planets/<%=planet['id']%>/edit" style="display: inline;">Edit</a></button> 
+    </div>
+
+<%end%>
+
+

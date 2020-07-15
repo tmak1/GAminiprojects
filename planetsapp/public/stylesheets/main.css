@@ -1,0 +1,60 @@
+main {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#add-planets {
+  margin: 100px;
+  border: 1px solid black ;
+  padding: 10px;
+  font-size: 24px;
+}
+
+a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+.card {
+    margin: 50px;
+    padding: 10px;
+    width: 30%;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.4s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 18px 26px 0 rgba(0,0,0,0.2);
+    border: 0.2px solid lightcoral;
+    background-color: mistyrose;
+    cursor: pointer;
+  }
+  
+  /* Add some padding inside the card container */
+  .card-container {
+    padding: 2px 16px;
+  }
+
+.card a {
+    display: block;
+    height: 100%;
+    z-index: -1;
+}  
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    margin: 100px;
+}
+
+.desc {
+    padding: 50px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}

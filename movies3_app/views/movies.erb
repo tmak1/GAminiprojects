@@ -1,0 +1,19 @@
+<div class="results-container">
+    <% @results["Search"].each do |result| %>
+    <a href="/movies/<%= result["Title"] %>">
+        <div class="card">
+            <div class="card-container">
+                <h2><b><%= result["Title"] %> (<%= result["Year"] %>)</b></h2>
+            </div>
+            <img src="<%= result["Poster"] %>" alt="<%= result["Title"] %> poster">
+        </div>
+    </a>  
+    <%end%>
+</div>  
+
+
+
+
+        
+
+

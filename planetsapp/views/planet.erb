@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="desc">
+        <h1>Name: <%= @result["name"] %></h1>
+        <h2>Mass: <%= @result["mass"] %></h2>
+        <h2>Diameter: <%=@result["diameter"]%></hh2>
+        <h2>Distance from sun: <%=@result["distance"]%></h2>
+        <h2>Moons: <%=@result["moon_count"]%></h2> 
+    <div class="poster"><img src="<%= @result["image_url"] %>" alt="<%= @result["name"] %> poster"></div>
+</div>

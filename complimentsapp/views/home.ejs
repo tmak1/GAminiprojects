@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body style="background-color: <%= color %>;">
+    <nav>
+        <ul>
+            <li><a href="/">Emergency compliment</a></li>
+            <li class="right"><a href="">About</a></li class="right">
+            <li class="right"><a href="">Store</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <h3><a href="/<%= name %>" class="a-button">Click me!</a></h3>
+        <h1><%= compliment %> </h1>
+        <div class="buttons">
+            <button>Thanks</button>
+            <button>Meh</button>
+        </div>
+    </div>
+    <script src="javascript/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="desc">
+        <h1><%= @result["Title"] %></h1>
+        <h2>(<%= @result["Year"] %>)</h2>
+        <h3>IMDB: <%=@result["imdbRating"]%>/10 <span>(<%=@result["imdbVotes"]%> votes)</span></h3>
+        <p>Runtime<%=@result["Runtime"]%> | Genre: <%=@result["Genre"]%> | Rated: <%=@result["Rated"]%></p>
+        <p>Director: <%=@result["Director"]%> 
+        <p>Actors:
+            <ul>
+                <%arr = @result["Actors"].split(", ").each do |n|%> 
+                    <li><%=n%></li>
+                <%end%>
+            </ul>
+        </p>
+    </div>
+    <div class="poster"><img src="<%= @result["Poster"] %>" alt="<%= @result["Title"] %> poster"></div>
+</div>

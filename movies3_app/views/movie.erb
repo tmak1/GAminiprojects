@@ -1,0 +1,46 @@
+<%if @msg == "from OMDB"%>
+<div class="container">
+    <div class="desc">
+        <p>(<%= @msg%>)</p>
+        <h1><%= @movie["Title"]%></h1>
+        <h2>(<%= @movie["Year"] %>)</h2>
+        <h3>IMDB: <%=@movie["imdbRating"]%>/10 <span>(<%=@movie["imdbVotes"]%> votes)</span></h3>
+        <p>Runtime<%=@movie["Runtime"]%> | Genre: <%=@movie["Genre"]%> | Rated: <%=@movie["Rated"]%></p>
+        <p>Director: <%=@movie["Director"]%> 
+        <p>Actors:
+            <ul>
+                <% if @movie["Actors"] != nil
+                    arr = @movie["Actors"].split(", ").each do |n|%> 
+                        <li><%=n%></li>
+                    <%end
+                end%>
+            </ul>
+        </p>
+    </div>
+    <div class="poster"><img src="<%= @movie["Poster"] %>" alt="<%= @movie["Title"] %> poster"></div>
+</div>
+
+
+<%elsif @msg == "from DB"%>
+<div class="container">
+    <div class="desc">
+        <p>(<%= @msg%>)</p>
+        <h1><%= @movie["title"]%></h1>
+        <h2>(<%= @movie["year"] %>)</h2>
+        <h3>IMDB: <%=@movie["imdbrating"]%>/10 <span>(<%=@movie["imdbvotes"]%> votes)</span></h3>
+        <p>Runtime<%=@movie["runtime"]%> | Genre: <%=@movie["genre"]%> | Rated: <%=@movie["rated"]%></p>
+        <p>Director: <%=@movie["director"]%> 
+        <p>Actors:
+            <ul>
+                <% if @movie["actors"] != nil
+                    arr = @movie["actors"].split(", ").each do |n|%> 
+                        <li><%=n%></li>
+                    <%end
+                end%>
+            </ul>
+        </p>
+    </div>
+    <div class="poster"><img src="<%= @movie["poster"] %>" alt="<%= @movie["title"] %> poster"></div>
+</div>
+
+<%end%>

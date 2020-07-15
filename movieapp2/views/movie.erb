@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="desc">
+        <p>(<%= @msg%>)</p>
+        <h1><%= @movie["Title"]%></h1>
+        <h2>(<%= @movie["Year"] %>)</h2>
+        <h3>IMDB: <%=@movie["imdbRating"]%>/10 <span>(<%=@movie["imdbVotes"]%> votes)</span></h3>
+        <p>Runtime<%=@movie["Runtime"]%> | Genre: <%=@movie["Genre"]%> | Rated: <%=@movie["Rated"]%></p>
+        <p>Director: <%=@movie["Director"]%> 
+        <p>Actors:
+            <ul>
+                <% if @movie["Actors"] != nil
+                    arr = @movie["Actors"].split(", ").each do |n|%> 
+                        <li><%=n%></li>
+                    <%end
+                end%>
+            </ul>
+        </p>
+    </div>
+    <div class="poster"><img src="<%= @movie["Poster"] %>" alt="<%= @movie["Title"] %> poster"></div>
+</div>

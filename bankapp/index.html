@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center">Bank</h1>
+    </header>
+    <div class="container">
+        <div class="main">
+            <div class="checking">
+                <h1>checking</h1>
+                <h3>your balance is...</h3>
+                <h1 id="chk-display">$ 00.00</h1>
+                <input type="number" id="chk-input" placeholder="ENTER AMOUNT HERE" value="0">
+                <div class="button-box">
+                    <button id="chk-withdraw-btn">Withdraw</button>
+                    <button id="chk-deposit-btn">Deposit</button>
+                </div>
+            </div>
+            <div class="savings">
+                <h1>savings</h1>
+                <h3>your balance is...</h3>
+                <h1 id="sv-display">$ 00.00</h1>
+                <input type="number" id="sv-input" placeholder="ENTER AMOUNT HERE" value="0">
+                <div class="button-box">
+                    <button id="sv-withdraw-btn">Withdraw</button>
+                    <button id="sv-deposit-btn">Deposit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
